@@ -1,0 +1,197 @@
+@font-face {
+	font-family: "Olde English";
+	src: url("assets/olde-english.regular.ttf");
+}
+
+@font-face {
+	font-family: "Carta Magna";
+	src: url("assets/carta-magna-line.ffp.ttf");
+}
+
+@media (max-width: 991px) {
+	#main {
+		margin-top: 6.5em;
+		margin-left: 0 !important;
+		width: 95vw !important;
+	}
+
+	#chat {
+		width: 90vw !important;
+	}
+
+	.message {
+		max-width: 30em;
+	}
+}
+
+html, body { /* Prevents scroll bar messing with delivery animation. */
+	max-width: 100%;
+	overflow-x: hidden;
+
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	background-color: #B57758;
+	text-align: center;
+	font-size: 2em;
+	font-family: sans-serif;
+}
+
+#main {
+	width: 70vw;
+	margin-left: 12vw;
+}
+
+#logo {
+	max-width: 3em;
+	display: block;
+	margin: 1em auto 0 auto;
+}
+
+h1 {
+	font-family: "Carta Magna";
+	font-size: 2em;
+	font-weight: normal;
+	color: #3B7965;
+	text-shadow: 3px 3px 5px #4C1E06;
+	margin: 0;
+	padding: 0;
+
+}
+
+header p {
+	text-shadow: 2px 2px 2px #4C1E06;
+	max-width: 20em;
+	margin: 0.3em auto 0.5em auto;
+
+}
+
+header button {
+	margin: 0.2em 0 0 0;
+	padding: 0.5em 1.2em 0.5em 1.2em;
+	font-size: 1em;
+	font-weight: bold;
+	color: black;
+	background-color: #3B7965;
+	border: solid black 2px;
+	border-radius: 0.2em;
+	transition-duration: 0.4s;
+	box-shadow: 0.2em 0.2em 1em black;
+}
+
+header button:hover {
+	background-color: white;
+	cursor: pointer;
+	margin: 0.3em 0.05em 0.2em -0.05em;
+}
+
+header button img {
+	display: inline;
+	vertical-align: middle;
+	margin-right: 1em;
+}
+
+header button span {
+	vertical-align: middle;
+}
+
+#chat {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 30vw;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.message {
+	margin: 1em 0 0 0;
+	padding: 0;
+	display: block;
+	width: 90%;
+	background-color: #3E5A77;
+	text-align: left;
+	font-size: 0.5em;
+	border-radius: 1em;
+	box-shadow: 2px 2px 6px 2px black;
+	animation-duration: 1s;
+	animation-name: deliver;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.message h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 1.2em;
+}
+
+.message p {
+	margin: 0;
+	padding: 0;
+}
+
+.message_content {
+	margin: 0.5em 0 0.5em 0.5em;
+	display: inline-block;
+	width: 65%;
+	vertical-align: top;
+	min-height: 4.2em;
+}
+
+.profile_picture {
+	margin: 0.5em;
+	padding: 0;
+	float: left;
+	width: 4em;
+	height: 4em;
+	border-radius: 2em;
+}
+
+.reply {
+	background-color: #3B7965;
+	animation-name: reply;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes deliver {
+	from {
+		margin-left: 100%;
+		opacity: 0;
+	}
+
+	to {
+		margin-left: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes reply {
+	from {
+		margin-top: 100%;
+		opacity: 0;
+	}
+
+	to {
+		margin-top: 1em;
+		opacity: 1;
+	}
+}
+
+@keyframes delete {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
