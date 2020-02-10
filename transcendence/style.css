@@ -1,0 +1,133 @@
+
+#result {
+	display: none;
+	text-align: center;
+	font-family: sans-serif;
+	margin-top: 5em;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+}
+
+
+#result p {
+	max-width: 30em;
+	margin: 0.6em auto 0 auto;
+}
+
+
+#nausea {
+	font-style: italic;
+}
+
+#yuck {
+	animation-fill-mode: forwards;
+
+}
+
+.sartre {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+}
+
+body {
+	background-color: yellow;
+	animation-duration: 2s;
+	animation-name: nausea;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	text-align: center;
+}
+
+button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation-duration: 5s;
+	animation-name: judder;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	font-size: 2em;
+	font-family: mono;
+	background-color: red !important;
+	padding: 1em;
+	border-radius: 1em;
+	text-align: center;
+	box-shadow: 0.2em 0.2em 1em grey;
+	border: solid 1px blue;
+}
+
+
+@keyframes nausea {
+	from {
+		background-color: yellow;
+	}
+
+	40% {
+		background-color: green;
+	}
+
+	to {
+		background-color: yellow;
+	}
+
+}
+
+
+@keyframes whiten {
+	from {
+		background-color: green;
+	}
+
+	to {
+		background-color: white;
+	}
+}
+
+
+@keyframes judder {
+	from {
+		top: 50%;
+		left: 50%;
+	}
+
+	25% {
+		top: 55%;
+		left: 43%;
+	}
+
+	60% {
+		top: 30%;
+		left: 62%
+	}
+
+	to {
+		top: 50%;
+		left: 50%;
+	}
+
+}
+
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+@keyframes fadeout {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+
+
